@@ -130,7 +130,7 @@ formElement.addEventListener('submit', handleFormSubmition)
 
 // display the user's ip address informations, this will happen when the page loads :
 
-getRequestFetch('http://api.ipify.org/?format=json').then( 
+getRequestFetch('https://api.ipify.org/?format=json').then( 
     (data) => {
         return data.ip
     }
