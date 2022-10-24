@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+    --font-rubik: 'Rubik', sans-serif;
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    font-family: var(--font-rubik);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 35% 7% 7% 50% / 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+/* Form Styling */
+
+form {
+    grid-area: 1 / 1 / 3 / 2;
+    background-image: url('./images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+label {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.ip-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ip-input * {
+    box-sizing: border-box;
+    border: 0;
+    height: 70px;
+    color: var(--very-dark-gray);
+    font-weight: 700;
+}
+
+input {
+    width: 500px;
+    border-radius: 15px 0 0 15px;
+}
+input::placeholder{
+    font-weight: 500;
+}
+input:focus{
+    outline: none;
+
+}
+
+button {
+    border-radius: 0 15px 15px 0;
+    width: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: contrast(80%);
+}
+
+/* information pannel styling */
+
+.info-screen {
+    z-index: 2;
+    font-weight: 700;
+    justify-self: center;
+    background-color: white;
+    grid-area: 2 / 1 / 4 / 2;
+    width: max(600px, 80%);
+    border-radius: 20px;
+    padding: 0 20px;
+    display: grid;
+    grid-template: 70% / repeat(4, 1fr);
+    gap: 15px;
+    align-content: center;
+}
+
+.info-case * {
+    margin: 0;
+    padding: 0;
+}
+
+.info-case {
+    border-right: 1px solid hsl(0, 0%, 80%);
+    display: grid;
+    grid-template: 1fr 2fr / 1fr;
+    align-items: center;
+}
+
+.info-title {
+    color: var(--dark-gray);
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.info-body {
+    align-self: start;
+    font-size: 1rem;
+}
+
+#last-case {
+    border: none;
+}
+
+/* map div */
+#map{
+    z-index: 1;
+    grid-area: 3 / 1 / 5 / 2;
+}
+
+@media screen and (max-width: 960px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        height: 100vh;
+        grid-template: 1fr 1fr 1fr 50% / 1fr;
+    }
+    
+
+    /* Form Styling */
+    form {
+        display: grid;
+        grid-template: 1fr 1fr 3fr / 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .ip-input * {
+        height: 50px;
+    }
+
+    input {
+        width: 260px;
+        padding-left: 10px;
+    }
+
+    /* information pannel styling */
+
+    .info-screen {
+        font-weight: 700;
+        justify-self: center;
+        background-color: white;
+        grid-area: 2 / 1 / 4 / 2;
+        width: 320px;
+        min-height: 120px;
+        border-radius: 10px;
+        padding: 20px 0 ;
+        display: grid;
+        grid-template: repeat(4, 1fr) / 1fr;
+        gap: 15px;
+        align-content: center;
+    }
+
+    .info-case * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-case {
+        border: 0;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .info-title {
+        color: var(--dark-gray);
+        font-size: .8rem;
+        letter-spacing: 1px;
+    }
+
+    .info-body {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    label {
+        font-size: 1.5rem;
+    }
+}
+
+/* fix height problems */
+@media screen and (max-width: 700px) and (max-height: 600px) {
+    html{
+        font-size: 10px;
+    }
+    .ip-input *{
+        height: 30px;
+    }
+    input{
+        border-radius: 5px 0 0 5px;
+    }
+    button{
+        border-radius: 0 5px 5px 0;
+    }
+}
