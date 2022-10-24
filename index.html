@@ -25,9 +25,9 @@
 
 <body>
     <form id="form">
-      <label for="ip-address">IP Address Tracker</label>
+      <label for="ip-address-input">IP Address Tracker</label>
       <div class="ip-input">
-        <input type="text" id="ip-address" name="ip-address" placeholder="Search for any IP address or domain">
+        <input type="text" id="ip-address-input" name="ip-address-input" placeholder="Search for any IP address or domain">
         <button type="submit"><img src="./images/icon-arrow.svg"></button>
       </div>
     </form>
@@ -35,30 +35,30 @@
   <div class="info-screen">
     <div class="info-case">
       <p class="info-title">IP ADDRESS</p>
-      <p class="info-body" id="ip-address">192.212.174.101</p>
+      <p class="info-body" id="ip-address">Loading...</p>
     </div>
 
     
     <div class="info-case">
       <p class="info-title">LOCATION</p>
-      <p class="info-body" id="location">Brooklyn,NY 10001</p>
+      <p class="info-body" id="location">Loading...</p>
     </div>
 
 
     <div class="info-case">
       <p class="info-title">TIMEZONE</p>
-      <p class="info-body" id="timezone">UTC -05:00</p>
+      <p class="info-body" id="timezone">Loading...</p>
     </div>
 
 
     <div class="info-case" id="last-case">
       <p class="info-title">ISP</p>
-      <p class="info-body" id="isp">SpaceX Starlink</p>
+      <p class="info-body" id="isp">Loading...</p>
     </div>
   </div>
 
-  <div id="map">
-
+  <div id="weather-map">
+    <div id="map"></div>
   </div>
 </body>
 

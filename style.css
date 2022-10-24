@@ -51,12 +51,13 @@ label {
     border: 0;
     height: 70px;
     color: var(--very-dark-gray);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 input {
     width: 500px;
     border-radius: 15px 0 0 15px;
+    padding-left: 15px;
 }
 input::placeholder{
     font-weight: 500;
@@ -135,7 +136,7 @@ button:hover {
 }
 
 /* map div */
-#map{
+#weather-map{
     z-index: 1;
     grid-area: 3 / 1 / 5 / 2;
 }
