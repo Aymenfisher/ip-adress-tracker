@@ -9,8 +9,9 @@ async function getRequestFetch(url) { // async get reaquest with fetch boilerpla
             return jsonResponse
         }
         throw new Error('request Failed!')
+
     } catch (error) {
-        console.log(error)
+        alert(error)
     }
 }
 
