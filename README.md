@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: 
-- Live Site URL: [live site URL here](https://aymenfisher.github.io/ip-address-tracker)
+- Live Site URL: [live site URL here](https://aymenfisher.github.io/ip-adress-tracker)
 
 ## My process
 
